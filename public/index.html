@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmuOBvDLy9wXZAumG9sM0aiCPAmTqOu3Q&libraries=places"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/skycons/1396634940/skycons.min.js"></script>
+    <script defer src="script.js"></script>
+    <title>Weather App</title>
+</head>
+
+<body>
+    <div class="city-search-container">
+        <input type="text" class="city-search" data-city-search placeholder="Enter Location" data-city-search autofocus>
+    </div>
+    <div class="container">
+        <div class="header">
+            <div class="icon-container">
+                <canvas id="icon" width="100" height="100"></canvas>
+            </div>
+        </div>
+        <div class="content">
+            <div class="general-information">
+                <div class="status" data-status>Summary</div>
+                <div class="location" data-location>Location</div>
+            </div>
+            <div class="detail-section">
+                <div class="detail bordered">
+                    <div class="title" style="font-weight: bold;">Temperature</div>
+                    <div class="value" data-temperature>-</div>
+                </div>
+                <div class="detail bordered">
+                    <div class="title">Wind</div>
+                    <div class="value" data-wind>-</div>
+                </div>
+                <div class="detail bordered">
+                    <div class="title">Precipitation</div>
+                    <div class="value" data-precipitation>-</div>
+                </div>
+                <div class="detail ">
+                    <div class="title">Type</div>
+                    <div class="value" data-precip-type>-</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p class="farrukh"> Built by <a href="https://www.atabekov.com">Atabekov Farrukh </a> with API from <a href="https://darksky.net/poweredby">Dark Sky</a></p>
+</body>
+
+</html>
