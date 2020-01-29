@@ -6,4 +6,4 @@ Some of the tools used in the app include DARKSKY API, PLACES API from GOOOGLE a
 
 [LIVE DEMO WITH HEROKU](https://farrukh-weather-app.herokuapp.com/)
 
-[Preview](preview.png)
+![Preview](/preview.png)
