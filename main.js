@@ -3,10 +3,10 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 //Call the secret key and dependencies
-const DARKSKY_API_KEY = process.env.DARKSKY_API_KEY
-const axios = require('axios')
 
-//Call the dependencies
+const axios = require('axios')
+const DARK_SKY_API = process.env.DARKSKY_API_KEY
+    //Call the dependencies
 const express = require("express")
 const app = express()
 app.use(express.json())
@@ -14,7 +14,7 @@ app.use(express.static('public'))
 const port = process.env.PORT || 3000
 
 app.post('/weather', (req, res) => {
-    const url = `https://api.darksky.net/forecast/${DARKSKY_API_KEY}/${req.body.latitude},${req.body.longitude}?units=auto`
+    const url = `https://api.darksky.net/forecast/${DARK_SKY_API}/${req.body.latitude},${req.body.longitude}?units=auto`
     axios({
         url: url,
         responseType: 'json',
