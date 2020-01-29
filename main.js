@@ -11,6 +11,7 @@ const express = require("express")
 const app = express()
 app.use(express.json())
 app.use(express.static('public'))
+const port = process.env.PORT || 3000
 
 app.post('/weather', (req, res) => {
     const url = `https://api.darksky.net/forecast/${DARKSKY_API_KEY}/${req.body.latitude},${req.body.longitude}?units=auto`
@@ -21,6 +22,6 @@ app.post('/weather', (req, res) => {
 })
 
 
-app.listen(5000, () => {
+app.listen(port, () => {
     console.log("Server started")
 })
